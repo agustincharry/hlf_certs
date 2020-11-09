@@ -8,8 +8,8 @@ path=$6
 
 
 metric(){
-res=$(sudo curl "$url")
-if [ "$res" == "App status: 200" ];then
+res=sudo curl -sS http://orderer-interoperabilidad-dev.apps.ambientesbc.com:8443/healthz | jq -r ".status"
+if [ "$res" == "OK" ];then
     status=1
 else
     status=0
