@@ -19,8 +19,8 @@ aws cloudwatch put-metric-data --region "$region" --metric-name "Container statu
 
 init(){
 sudo touch $path/crontabs
-echo "* * * * * $path/metric-script.sh metric $instanceTagName $nameSpace "$region"  $url" >> $path/crontabs
-echo "* * * * * sleep 30 && $path/metric-script.sh metric $instanceTagName $nameSpace "$region"  $url" >> $path/crontabs
+echo "* * * * * sudo $path/metric-script.sh metric $instanceTagName $nameSpace "$region"  $url" >> $path/crontabs
+echo "* * * * * sleep 30 && sudo $path/metric-script.sh metric $instanceTagName $nameSpace "$region"  $url" >> $path/crontabs
 crontab $path/crontabs
 }
 $1
