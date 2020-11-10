@@ -8,7 +8,7 @@ path=$6
 
 
 metric(){
-res=$(sudo curl -sS http://orderer-interoperabilidad-dev.apps.ambientesbc.com:8443/healthz | jq -r ".status")
+res=$(sudo curl -sS $url | jq -r ".status")
 if [ "$res" == OK ];then
     status=1
 else
