@@ -15,7 +15,7 @@ sudo mkdir -p /etc/efs/
 export FILE_SYSTEM_PARAMETER="/$applicationcode-$project-$environment-arn/efs_file_system"
 echo ------------FILE_SYSTEM_PARAMETER------------------
 echo $FILE_SYSTEM_PARAMETER
-export FILE_SYSTEM_ARN=$(aws ssm get-parameter --name $FILE_SYSTEM_PARAMETER | jq -r ".Parameter.Value" )
+export FILE_SYSTEM_ARN=$(aws ssm get-parameter --region "$region" --name $FILE_SYSTEM_PARAMETER | jq -r ".Parameter.Value" )
 echo ------------FILE_SYSTEM_ARN------------------
 echo $FILE_SYSTEM_ARN
 export MOUNT_TARGET_DNS=$FILE_SYSTEM_ARN.efs.$region.amazonaws.com
