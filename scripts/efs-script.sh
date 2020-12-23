@@ -24,7 +24,7 @@ echo $MOUNT_TARGET_DNS
 echo ----------------------------------------------
 sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport $MOUNT_TARGET_DNS:/ /etc/efs/
 sudo mkdir -p /etc/efs/$pInstanceTagName
-sudo umount $MOUNT_TARGET_DNS:/
+#sudo umount $MOUNT_TARGET_DNS:/
 sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport $MOUNT_TARGET_DNS:/$pInstanceTagName $MOUNT_POINT
 echo $FILE_SYSTEM_ARN:/$pInstanceTagName $MOUNT_POINT efs _netdev,tls,iam 0 0 >> /etc/fstab
 echo -------------/etc/fstab-----------------
