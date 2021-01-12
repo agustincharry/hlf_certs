@@ -17,5 +17,5 @@ echo ----- REQUEST CERTIFICATE $CN-----
 #ARN_CERTIFICATE=$(aws acm-pca issue-certificate --region $REGION --certificate-authority-arn $CERTIFICATE_AUTHORITY_ARN --csr file://./request1.csr --signing-algorithm "SHA256WITHECDSA" --template-arn $TEMPLATE_ARN  --validity Value=$EXPIRACION,Type="DAYS" --profile acm-pca-blockchain | jq -r .CertificateArn)
 ARN_CERTIFICATE=test-$CN
 echo $ARN_CERTIFICATE
-aws secretsmanager put-secret-value --region $REGION --secret-id $CERTIFICATE_SECRET --secret-string $ARN_CERTIFICATE
+#aws secretsmanager put-secret-value --region $REGION --secret-id $CERTIFICATE_SECRET --secret-string $ARN_CERTIFICATE
 export INSTANCE_ID=$(curl http://169.254.169.254/latest/meta-data/instance-id)
