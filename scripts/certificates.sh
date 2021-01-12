@@ -19,3 +19,4 @@ ARN_CERTIFICATE=test-$CN
 echo $ARN_CERTIFICATE
 #aws secretsmanager put-secret-value --region $REGION --secret-id $CERTIFICATE_SECRET --secret-string $ARN_CERTIFICATE
 export INSTANCE_ID=$(curl http://169.254.169.254/latest/meta-data/instance-id)
+echo $INSTANCE_ID --
