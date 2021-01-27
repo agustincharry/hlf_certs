@@ -1,14 +1,14 @@
 NodeOUs:
   Enable: true
   ClientOUIdentifier:
-    Certificate: cacerts/ca.Bancolombia-cert.pem
+    Certificate: cacerts/ca.consortium-cert.pem
     OrganizationalUnitIdentifier: client
   PeerOUIdentifier:
-    Certificate: cacerts/ca.Bancolombia-cert.pem
+    Certificate: cacerts/ca.consortium-cert.pem
     OrganizationalUnitIdentifier: peer
   AdminOUIdentifier:
-    Certificate: cacerts/ca.Bancolombia-cert.pem
+    Certificate: cacerts/ca.consortium-cert.pem
     OrganizationalUnitIdentifier: admin
   OrdererOUIdentifier:
-    Certificate: cacerts/ca.Bancolombia-cert.pem
+    Certificate: cacerts/ca.consortium-cert.pem
     OrganizationalUnitIdentifier: orderer
