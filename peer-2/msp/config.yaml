@@ -1,11 +1,11 @@
 NodeOUs:
-  Enable: false
+  Enable: true
   ClientOUIdentifier:
     Certificate: cacerts/ca.Bancolombia-cert.pem
     OrganizationalUnitIdentifier: client
   PeerOUIdentifier:
     Certificate: cacerts/ca.Bancolombia-cert.pem
-    OrganizationalUnitIdentifier: peer
+    OrganizationalUnitIdentifier: peer(C26FB4283776F277)
   AdminOUIdentifier:
     Certificate: cacerts/ca.Bancolombia-cert.pem
     OrganizationalUnitIdentifier: admin
