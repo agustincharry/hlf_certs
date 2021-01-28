@@ -5,7 +5,7 @@ NodeOUs:
     OrganizationalUnitIdentifier: client
   PeerOUIdentifier:
     Certificate: cacerts/ca.Bancolombia-cert.pem
-    OrganizationalUnitIdentifier: peer(C26FB4283776F277)
+    OrganizationalUnitIdentifier: peer
   AdminOUIdentifier:
     Certificate: cacerts/ca.Bancolombia-cert.pem
     OrganizationalUnitIdentifier: admin
