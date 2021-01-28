@@ -1,5 +1,5 @@
 NodeOUs:
-  Enable: true
+  Enable: false
   ClientOUIdentifier:
     Certificate: cacerts/ca.Bancolombia-cert.pem
     OrganizationalUnitIdentifier: client
